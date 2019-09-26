@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="title_height">Introduce Estatura (Mts.)</string>
+    <string name="title_weight">Introduce Peso (Kg.)</string>
+    <string name="title_button_calculate">Calcular</string>
+    <string name="undernourished">Desnutrido</string>
+    <string name="thin">Delgado</string>
+    <string name="normal">Ideal/Normal</string>
+    <string name="overweight">Sobrepeso</string>
+    <string name="obese">Obeso</string>
+    <string name="result">RESULTADO</string>
+    <string name="response">El IMC es</string>
+    <string name="title_button_clear">Limpiar</string>
+</resources>

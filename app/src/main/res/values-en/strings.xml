@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="title_height">Enter Height (Mts.)</string>
+    <string name="title_weight">Enter Weight (Kg.)</string>
+    <string name="title_button_calculate">Calculate</string>
+    <string name="undernourished">Undernourished</string>
+    <string name="thin">Thin</string>
+    <string name="normal">Ideal/Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="result">RESULT</string>
+    <string name="response">The IMC is</string>
+    <string name="title_button_clear">Clear</string>
+</resources>
