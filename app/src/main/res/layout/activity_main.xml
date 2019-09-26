@@ -10,7 +10,7 @@
         android:id="@+id/editEstatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/title_height"
         android:inputType="numberDecimal"
@@ -62,26 +62,38 @@
         android:id="@+id/textCabecera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="92dp"
         android:text=""
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPeso" />
 
     <TextView
         android:id="@+id/textResultado"
-        android:layout_width="335dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="400dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
         android:gravity="center|center_horizontal"
         android:text=""
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCabecera" />
 
+    <ImageView
+        android:id="@+id/imageAsociada"
+        android:layout_width="138dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

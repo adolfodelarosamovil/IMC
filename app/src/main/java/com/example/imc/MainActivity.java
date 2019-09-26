@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
 
     @Override
@@ -45,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         TextView cabecera = (TextView) findViewById(R.id.textCabecera);
         TextView resultado = (TextView) findViewById(R.id.textResultado);
 
+        //setear imagen
+        ImageView imagen_asociada = findViewById(R.id.imageAsociada);
+
         String estatura = editEstatura.getText().toString();
         String peso = editPeso.getText().toString();
 
@@ -60,15 +62,25 @@ public class MainActivity extends AppCompatActivity {
         if(imc > 0 ){
             cabecera.setText(getResources().getString(R.string.result));
             if(16 > imc ){
+                Log.d("IMC", "DESNUTRIDO");
                 descripcion = getResources().getString(R.string.undernourished);
+                imagen_asociada.setImageResource(R.drawable.girl);
             } else if(16 <= imc && imc <= 18 ){
+                Log.d("IMC", "DELGADO");
                 descripcion = getResources().getString(R.string.thin);
+                imagen_asociada.setImageResource(R.drawable.pantera_rosa);
             } else if(18 <= imc && imc <= 25 ){
+                Log.d("IMC", "NORMAL");
                 descripcion = getResources().getString(R.string.normal);
+                imagen_asociada.setImageResource(R.drawable.normal);
             } else if(25 <= imc && imc <= 31 ){
+                Log.d("IMC", "SOBREPESO");
                 descripcion = getResources().getString(R.string.overweight);
+                imagen_asociada.setImageResource(R.drawable.sobrepeso);
             } else if(31 <= imc ) {
+                Log.d("IMC", "OBESO");
                 descripcion = getResources().getString(R.string.obese);
+                imagen_asociada.setImageResource(R.drawable.obeso);
             }
 
             NumberFormat formatter = new DecimalFormat("#0.00");
@@ -98,9 +110,13 @@ public class MainActivity extends AppCompatActivity {
         TextView cabecera = (TextView) findViewById(R.id.textCabecera);
         TextView resultado = (TextView) findViewById(R.id.textResultado);
 
+        ImageView imagen_asociada = findViewById(R.id.imageAsociada);
+
         editEstatura.setText("");
         editPeso.setText("");
         cabecera.setText("");
         resultado.setText("");
+        imagen_asociada.setImageResource(0);
+
     }
 }

@@ -8,40 +8,44 @@
 
     <EditText
         android:id="@+id/editEstatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Introduce Estatura (Mts.)"
         android:inputType="numberDecimal"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editPeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Introduce Peso (Kg.)"
         android:inputType="numberDecimal"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editEstatura" />
+        app:layout_constraintStart_toEndOf="@+id/editEstatura"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:onClick="calcularIMC"
         android:text="Calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPeso" />
+        app:layout_constraintStart_toEndOf="@+id/editPeso"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/textCabecera"
@@ -52,19 +56,46 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/editEstatura" />
 
     <TextView
         android:id="@+id/textResultado"
-        android:layout_width="444dp"
-        android:layout_height="56dp"
+        android:layout_width="365dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="10dp"
         android:gravity="center|center_horizontal"
         android:text=""
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCabecera" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="limpiarCampos"
+        android:text="@string/title_button_clear"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageAsociada"
+        android:layout_width="155dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toEndOf="@+id/textResultado"
+        app:layout_constraintTop_toBottomOf="@+id/editPeso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
